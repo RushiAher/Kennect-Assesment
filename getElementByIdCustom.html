@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container" class="">
+      <p id="page-title" class="">This is title of the page</p>
+      <button id="btn" type="button" class="" >
+        submit
+      </button>
+    </div>
+
+    <script>
+      function getElementByIdCustom(id) {
+        const allElements = document.getElementsByTagName("*");
+        for (let i = 0; i < allElements.length; i++) {
+          const element = allElements[i];
+
+          if (element.id === id) {
+            return element;
+          }
+        }
+        return null;
+      }
+
+      console.log(getElementByIdCustom("page-title").innerHTML);
+    </script>
+  </body>
+</html>
